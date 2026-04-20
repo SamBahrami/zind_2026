@@ -349,7 +349,7 @@ class ConvertS3D:
                 )
                 top_right = np.asarray([wdo_points[1][0], wdo_points[1][1], y_top])
                 wdo_type_structure3d = "door"
-                if wdo_type is "windows":
+                if wdo_type == "windows":
                     wdo_type_structure3d = "window"
 
                 wdo_ordered_list = [
@@ -589,6 +589,7 @@ def main():
         input_files_list,
         desc="Transforming ZinD data format to a sub-set of the Structure3D data format",
     ):
+        print(f"\nProcessing: {input_file}", flush=True)
         zindass3d = ConvertS3D(input_file)
         zindass3d.export(args.output)
 

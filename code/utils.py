@@ -16,7 +16,7 @@ CHECK_RIGHT_ANGLE_THRESH = 0.1
 
 class Point2D(collections.namedtuple("Point2D", "x y")):
     @classmethod
-    def from_tuple(cls, t: Tuple[np.float, np.float]):
+    def from_tuple(cls, t: Tuple[float, float]):
         return cls._make(t)
 
 
@@ -53,7 +53,7 @@ class Polygon(
         return super(Polygon, cls).__new__(cls, type, points, name)
 
     @staticmethod
-    def list_to_points(points: List[Tuple[np.float, np.float]]):
+    def list_to_points(points: List[Tuple[float, float]]):
         return [Point2D._make(p) for p in points]
 
     @property
