@@ -1,5 +1,8 @@
 requests
 shapely
 trimesh
+mapbox-earcut
 pyquaternion
+opencv-python
+numpy
 tqdm
